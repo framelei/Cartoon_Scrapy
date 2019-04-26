@@ -9,10 +9,21 @@ import scrapy
 
 
 class CartoonItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+
+    #大类的标题和url      漫画名
+    parentTitle = scrapy.Field()
+    parentUrl = scrapy.Field()
+
+    #小类的标题和url      章节名
+    subTitle = scrapy.Field()
+    subUrl = scrapy.Field()
+
+    # 小类目录存储路径,最终存储时提供路径    漫画的最终路径
+    subFilename = scrapy.Field()
+
+    #漫画标题、url                           漫画的名称、每个图片url
+
+    detail_url = scrapy.Field()
     image_title = scrapy.Field()
+
     image_url = scrapy.Field()
-    section_name = scrapy.Field()
-    manhua_name = scrapy.Field()
-    image_paths = scrapy.Field()
